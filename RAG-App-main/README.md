@@ -1,21 +1,5 @@
 # RAG PDF Assistant
 
-## Live Demo (Hugging Face Spaces)
-
-**Try it here: https://huggingface.co/spaces/Sasikumar234/rag-pdf-assistant**
-
-The Gradio web UI (`app.py`) is deployed on Hugging Face Spaces (ZeroGPU, free tier):
-
-- Upload PDFs and index them, or ask questions against the bundled sample — retrieval
-  (embeddings + Qdrant search) runs with no API key.
-- The answer-generation step uses **your own** API key for the provider you pick in
-  the UI - OpenRouter or Google Gemini - typed into the UI; no key is stored or
-  shipped with the Space.
-- GPU calls are capped at 60s per request, the free ZeroGPU maximum. The account's free
-  ZeroGPU quota is ~5 GPU-minutes/day, so heavy testing can exhaust it until the daily reset.
-- The original CLI (`main.py`) is unchanged and remains the primary interface.
-
-
 
 ## 1. Architecture Overview
 This application implements a modular Retrieval-Augmented Generation (RAG) pipeline:
